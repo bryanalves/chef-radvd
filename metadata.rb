@@ -4,7 +4,7 @@ maintainer_email 'bryanalves@gmail.com'
 license          'MIT'
 description      'Installs/Configures radvd'
 long_description 'Installs/Configures radvd'
-version          '0.0.1'
+version          '0.0.2'
 issues_url       'https://github.com/bryanalves/chef-radvd/issues' if respond_to?(:issues_url)
 source_url       'https://github.com/bryanalves/chef-radvd' if respond_to?(:source_url)
 
@@ -25,4 +25,4 @@ attribute 'radvd/prefixes',
 
 recipe 'radvd::default', 'Installs radvd'
 
-depends 'sysctl', '~> 0.7.5'
+depends 'sysctl', '~> 0.7.0'
