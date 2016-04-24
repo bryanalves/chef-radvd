@@ -1,0 +1,19 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: debian-8.1
+
+suites:
+  - name: default
+    run_list:
+      - radvd::default
+    attributes:
+        radvd:
+            prefixes: {
+                "2001:123::1/64": {}
+            }

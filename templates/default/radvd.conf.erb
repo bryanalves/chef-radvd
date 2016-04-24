@@ -1,0 +1,15 @@
+interface <%= @interface %>
+{
+  <% @interface_options.each do |optkey, optval| %>
+    <%= optkey %> <%= optval %>;
+  <% end %>
+
+  <% @prefixes.each do |prefix, options| %>
+    prefix <%= prefix %>
+    {
+    <% options.each do |optkey, optval| %>
+      <%= optkey %> <%= optval %>;
+    <% end %>
+    };
+  <% end %>
+};
